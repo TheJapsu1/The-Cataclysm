@@ -96,7 +96,7 @@ MonoBehaviour:
     texturingModel: 0
     splatsModel: 0
     origin: {x: 0, y: 0, z: 0}
-    tileSize: {x: 500, y: 500, z: 500}
+    tileSize: {x: 5000, y: 500, z: 5000}
     tileCountX: 1
     tileCountZ: 1
     groupId: 0
