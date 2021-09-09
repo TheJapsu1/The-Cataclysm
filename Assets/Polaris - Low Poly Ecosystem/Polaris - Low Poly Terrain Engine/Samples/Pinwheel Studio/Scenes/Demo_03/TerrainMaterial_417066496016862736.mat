@@ -26,15 +26,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlend:
-        m_Texture: {fileID: -4894262649020139546, guid: 0dab121e71a3e7e429417ae8b4ce9552, type: 2}
+        m_Texture: {fileID: 6364476316487279445, guid: 0dab121e71a3e7e429417ae8b4ce9552, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByHeight:
-        m_Texture: {fileID: 4862366695811401371, guid: 0dab121e71a3e7e429417ae8b4ce9552, type: 2}
+        m_Texture: {fileID: 1014953949162745284, guid: 0dab121e71a3e7e429417ae8b4ce9552, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByNormal:
-        m_Texture: {fileID: -8791113709900874054, guid: 0dab121e71a3e7e429417ae8b4ce9552, type: 2}
+        m_Texture: {fileID: 2826249670283677958, guid: 0dab121e71a3e7e429417ae8b4ce9552, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -70,6 +70,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}

@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - a_Listener
-  - Head
-  - charaVoiceOverAudioSource
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,8 +11,6 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
   - PostProcessing
   - 
   - 
@@ -39,6 +34,8 @@ TagManager:
   - 
   - 
   - 
+  - 
+  - POLARIS RAYCAST
   - 
   m_SortingLayers:
   - name: Default
