@@ -10,7 +10,7 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField] private GTerrainData dataTemplate;
 
     [SerializeField] private Material terrainMat;
-    [SerializeField] private Texture2D[] brushMasks;
+    [SerializeField] private TerrainStamp[] terrainStamps;
     [SerializeField] private int passCount = 10;
     
     [SerializeField] private float noiseScale;
@@ -66,28 +66,30 @@ public class TerrainGenerator : MonoBehaviour
 
     private void GenerateTerrain(GStylizedTerrain terrain)
     {
-        Debug.Log(terrain.TerrainData.Geometry.HeightMap.name + " : " + terrain.TerrainData.Geometry.HeightMap.height);
-        
         for (int i = 0; i < passCount; i++)
         {
+            // Setup the render texture
             int heightMapResolution = terrain.TerrainData.Geometry.HeightMapResolution;
             RenderTexture rt = new RenderTexture(heightMapResolution, heightMapResolution, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear)
             {
                 wrapMode = TextureWrapMode.Clamp
             };
-
-            //NOTE: Paint here!
-
+            
             float x = Random.Range(0, terrain.TerrainData.Geometry.HeightMap.width);
             float y = Random.Range(0, terrain.TerrainData.Geometry.HeightMap.height);
+            
+            // Get the current stamp
+            TerrainStamp currentStamp = terrainStamps[Random.Range(0, terrainStamps.Length)];
 
             float elevation = GetElevationAt(x, y);
-
+            
             int pass = 0;
             if (elevation < 0)
             {
                 pass = 1;
-                elevation *= 1;
+                elevation *= -1;
+
+                if (currentStamp.CanBeNegative) pass = 0;
             }
         
             Texture2D bg = terrain.TerrainData.Geometry.HeightMap;
@@ -96,19 +98,13 @@ public class TerrainGenerator : MonoBehaviour
             Material mat = PainterMaterial;
             mat.SetTexture(MAIN_TEX, bg);
             SetupTextureGrid(terrain, mat);
-            mat.SetTexture(MASK, brushMasks[Random.Range(0, brushMasks.Length)]);
-            mat.SetFloat(OPACITY, Mathf.Pow(elevation, GTerrainTexturePainter.GEOMETRY_OPACITY_EXPONENT));
+            mat.SetTexture(MASK, currentStamp.Texture);
+            //mat.SetFloat(OPACITY, Mathf.Pow(elevation, GTerrainTexturePainter.GEOMETRY_OPACITY_EXPONENT));
+            mat.SetFloat(OPACITY, Mathf.Pow(elevation, currentStamp.Strength));
             mat.SetTexture(TERRAIN_MASK, Texture2D.blackTexture);
         
-            Debug.Log("x: " + x + " y: " + y + ", ElevationSample: " + elevation);
-
-            //TODO: This might not be necessary...
-            RaycastHit hit = Physics.RaycastAll(new Vector3(x, terrain.TerrainData.Geometry.Height + 10, y), Vector3.down,
-                terrain.TerrainData.Geometry.Height * 2).FirstOrDefault();
-            
-            if(hit.collider == null) return;
-        
-            Vector3[] worldPointCorners = GCommon.GetBrushQuadCorners(hit.point, Random.Range(10f, 300f), Random.Range(0f, 360f));
+            //TODO: Find out if it matters that we're using zero as the height of the stamping point
+            Vector3[] worldPointCorners = GCommon.GetBrushQuadCorners(new Vector3(x, 0, y), currentStamp.Radius, Random.Range(0f, 360f));
         
             Vector2[] uvCorners = GPaintToolUtilities.WorldToUvCorners(terrain, worldPointCorners);
             Rect dirtyRect = GUtilities.GetRectContainsPoints(uvCorners);
@@ -163,7 +159,6 @@ public class TerrainGenerator : MonoBehaviour
 
                 Vector2 enc = GCommon.EncodeTerrainHeight(GetElevationAt(x + terrain.transform.position.x,
                     y + terrain.transform.position.z));
-                //c.r = GetElevationAt(x + terrain.transform.position.x, y + terrain.transform.position.z);
 
                 c.r = enc.x;
                 c.g = enc.y;
@@ -281,7 +276,6 @@ public class TerrainGenerator : MonoBehaviour
 
     private static void FlattenHeightmap(GStylizedTerrain terrain, float elevation)
     {
-        Debug.Log(terrain.TerrainData.Geometry.HeightMap.name + " : " + terrain.TerrainData.Geometry.HeightMap.height);
         Texture2D hm = terrain.TerrainData.Geometry.HeightMap;
         Color[] data = hm.GetPixels();
         
@@ -298,8 +292,10 @@ public class TerrainGenerator : MonoBehaviour
             {
                 int pixelIndex = y * resolution + x;
                 Color c = data[pixelIndex];
-                Vector2 enc = GCommon.EncodeTerrainHeight(elevation);
-                c.r = enc.x;
+
+                float normalized = elevation / terrain.TerrainData.Geometry.Height;
+                Vector2 enc = GCommon.EncodeTerrainHeight(normalized);
+                c.r = enc.x; 
                 c.g = enc.y;
                 data[pixelIndex] = c;
             }
@@ -311,7 +307,21 @@ public class TerrainGenerator : MonoBehaviour
         terrain.TerrainData.Geometry.SetRegionDirty(GCommon.UnitRect);
         terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.Geometry);
         
-        //terrain.TerrainData.Geometry.ClearDirtyRegions();
-        Debug.Log(terrain.TerrainData.Geometry.HeightMap.name + " : " + terrain.TerrainData.Geometry.HeightMap.height);
+        terrain.TerrainData.Geometry.ClearDirtyRegions();
     }
+}
+
+[System.Serializable]
+public class TerrainStamp
+{
+    [SerializeField] private Texture2D texture;
+    [Range(5f, 500f)]
+    [SerializeField] private float radius = 20;
+    [SerializeField] private float strength = 1;
+    [SerializeField] private bool canBeNegative;
+
+    public float Strength => strength / 1000;
+    public float Radius => radius;
+    public Texture2D Texture => texture;
+    public bool CanBeNegative => canBeNegative;
 }

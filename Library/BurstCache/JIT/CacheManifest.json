@@ -3,7 +3,7 @@
   "Assemblies": [
     {
       "FullName": "Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-09-10T15:31:32.0352913Z"
+      "LastWriteTime": "2021-09-12T18:10:32.1501812Z"
     },
     {
       "FullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -15,7 +15,7 @@
     },
     {
       "FullName": "Pinwheel.Polaris.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-09-10T16:01:50.7705384Z"
+      "LastWriteTime": "2021-09-12T18:10:35.2992884Z"
     },
     {
       "FullName": "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -23,7 +23,7 @@
     },
     {
       "FullName": "Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-09-10T15:31:39.9374501Z"
+      "LastWriteTime": "2021-09-12T18:10:34.1460103Z"
     },
     {
       "FullName": "UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -34,7 +34,7 @@
     {
       "FullName": "System.Int32 Unity.Burst.Intrinsics.X86::DoGetCSRTrampoline()",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "1690c81fd1c10594f63e83ff9837c5ac",
+      "ModuleHash": "682cbd0a9351db528b565828e29eaf19",
       "LinkName": "CDCA4A5193BE5947",
       "AssemblyDependencyIndices": [
         0,
@@ -44,7 +44,7 @@
     {
       "FullName": "System.Void Unity.Burst.Intrinsics.X86::DoSetCSRTrampoline(System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "c61bcb13900d5bb1ee9fc09f708cbbe0",
+      "ModuleHash": "fe12c69b6a14fd083a7b3d47bbe99a97",
       "LinkName": "801E9A000BB37B05",
       "AssemblyDependencyIndices": [
         0,
@@ -52,10 +52,10 @@
       ]
     },
     {
-      "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GCountLeafNodeJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GCreateBaseTreeJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "67684ead43b088fef840bac77f03808e",
-      "LinkName": "0C97786F17571DD9",
+      "ModuleHash": "78ee63bc0fc584f3f2b449264cd1f9bc",
+      "LinkName": "220E4533353BF08F",
       "AssemblyDependencyIndices": [
         2,
         3,
@@ -64,10 +64,10 @@
       ]
     },
     {
-      "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GCreateBaseTreeJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GCountLeafNodeJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "aa8fe2d9f900ce5c6275d0027b4f7823",
-      "LinkName": "220E4533353BF08F",
+      "ModuleHash": "2b474059f72d156b9dceca1676941390",
+      "LinkName": "0C97786F17571DD9",
       "AssemblyDependencyIndices": [
         2,
         3,
@@ -78,7 +78,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.Rendering.GBuildInstancedBatchJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "19795bec716d6ffea18d15db7ea8345f",
+      "ModuleHash": "8db928b72cbe1f15e2bac8d5f69305bc",
       "LinkName": "2D282C6AC290DB37",
       "AssemblyDependencyIndices": [
         2,
@@ -90,7 +90,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.Rendering.GCalculateGrassTransformJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "e516b402eef5751c55222cc3dcb714d0",
+      "ModuleHash": "3888aa5cc0d91442e968979c667c47b3",
       "LinkName": "8D68ADA2D6DEA7A2",
       "AssemblyDependencyIndices": [
         2,
@@ -102,7 +102,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.Rendering.GCullAndCalculateTreeTransformJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "adb60c2b48f7e3593c046a4e90c9f5ae",
+      "ModuleHash": "890f87d67a3afb94714ae427afd0f304",
       "LinkName": "13D51F82CD6CEE30",
       "AssemblyDependencyIndices": [
         2,
@@ -114,7 +114,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.Rendering.GCullCellJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "6e8e93c5c072e9d8781d03cf000cfc50",
+      "ModuleHash": "bade355481978af00ab5e32883ddc8a8",
       "LinkName": "D31C3C73720D2A56",
       "AssemblyDependencyIndices": [
         2,
@@ -126,7 +126,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GCreateVertexJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "52f2c1e470b9a6e7ef8b7c6022571ee3",
+      "ModuleHash": "ff2b9401186f0b59f79f69d0488f0831",
       "LinkName": "403E0B2C5ABE47BE",
       "AssemblyDependencyIndices": [
         2,
@@ -139,7 +139,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GSplitBaseTreeForDynamicPolygonJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "b1121c1c64a4acb417b9f06f1693e054",
+      "ModuleHash": "941bd41f174b5bad3e4ba837e19bb977",
       "LinkName": "BEFBC3645E991327",
       "AssemblyDependencyIndices": [
         2,
@@ -151,7 +151,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GStitchSeamJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "c4ab577624b1ca72176583b9e5dac71b",
+      "ModuleHash": "ed47a77036830b12289b46eb53a02715",
       "LinkName": "EAFEF6A2AFD6EA45",
       "AssemblyDependencyIndices": [
         2,
@@ -163,7 +163,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Pinwheel.Griffin.GStitchSeamLODJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "6b8b0ad1ace3e43e3216d2e33671eb34",
+      "ModuleHash": "a2763f5a7e34e7af9f1835b2fa9799f7",
       "LinkName": "CE81508DE5B03C8F",
       "AssemblyDependencyIndices": [
         2,
@@ -175,7 +175,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.GMaskCullingJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "04fbb3efd7312eccd4d22819365f868a",
+      "ModuleHash": "5c635455e588e682cd9daa6087db076c",
       "LinkName": "547E508CF2C7F87B",
       "AssemblyDependencyIndices": [
         2,
@@ -188,7 +188,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.GSampleInstanceJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "b2e8bb454d848c967f107553d0c5073c",
+      "ModuleHash": "87099d6e8d9724ae21e9e5e3b56b12c9",
       "LinkName": "C3D37718921875C0",
       "AssemblyDependencyIndices": [
         2,
@@ -201,7 +201,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.GBuildRaycastCommandJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "50b535e05be1e3c2425ac0e610b24797",
+      "ModuleHash": "2f4f81d41c1ab47ad806127b5c1c4fbf",
       "LinkName": "D97B9E65F064DD6F",
       "AssemblyDependencyIndices": [
         2,
@@ -214,7 +214,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.Physic.GTransformTreesToLocalSpaceJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "ec271ea0f06cabe16e7d0ad41cb8bcdc",
+      "ModuleHash": "4b05a697179e3e98ab4c1da1c6a5427b",
       "LinkName": "78453B58A6FE92C3",
       "AssemblyDependencyIndices": [
         2,
@@ -226,7 +226,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.Physic.GTreeColliderCullJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "a30830b6dcbb7816c6c3fd86bd9c3848",
+      "ModuleHash": "df205372456d09e7f0d1a7f30a6914ce",
       "LinkName": "2AFA6540E7086ADD",
       "AssemblyDependencyIndices": [
         2,
@@ -238,7 +238,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.GFoliageExtensions/GPatchTestWithFilterJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "31a2674093efe9636559d41ed4beb89d",
+      "ModuleHash": "76a444e3ff797300c5dbecf8cf5c060b",
       "LinkName": "E30075F8BBAC1AF7",
       "AssemblyDependencyIndices": [
         2,
@@ -250,7 +250,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<Pinwheel.Griffin.SplineTool.GSplineCreator/GGenerateSweepRectsJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "4aa3345f7cbccbf41a2af276acb7dacc",
+      "ModuleHash": "7d52e33e4a6c4bc503846ad6f9a22a2f",
       "LinkName": "ADAE3CAD69022D0B",
       "AssemblyDependencyIndices": [
         2,

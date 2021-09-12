@@ -1,0 +1,1498 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.15f2 (6cf78cb77498) revision 7141260'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'fi' Physical Memory: 16335 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Unity Editors\2020.3.15f2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Unity Projects/The-Cataclysm
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60558
+Successfully changed project path to: D:/Unity Projects/The-Cataclysm
+D:/Unity Projects/The-Cataclysm
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 80.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.15f2 (6cf78cb77498)
+[Subsystems] Discovering subsystems at path D:/Unity Editors/2020.3.15f2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity Projects/The-Cataclysm/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
+    Vendor:   
+    VRAM:     2988 MB
+    Driver:   30.0.14.7141
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'D:/Unity Editors/2020.3.15f2/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity Editors/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity Editors/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity Editors/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001295 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 78.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.156 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1156ms)
+		BeginReloadAssembly (61ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (542ms)
+			LoadAssemblies (59ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (190ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (229ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (79ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (99ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004319 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 81.08 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.453 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2454ms)
+		BeginReloadAssembly (170ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (2214ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (389ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (1501ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (81ms)
+				BeforeProcessingInitializeOnLoad (120ms)
+				ProcessInitializeOnLoadAttributes (1131ms)
+				ProcessInitializeOnLoadMethodAttributes (160ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 183.7 MB.
+System memory in use after: 183.3 MB.
+
+Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 3851.
+Total: 3.803200 ms (FindLiveObjects: 0.366900 ms CreateObjectMapping: 0.099800 ms MarkObjects: 2.918800 ms  DeleteObjects: 0.416300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/PreviewTex.renderTexture
+  artifactKey: Guid(2d6106692b193cc488eb47ead769ab9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PreviewTex.renderTexture using Guid(2d6106692b193cc488eb47ead769ab9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1f65ff43a30675b7c4e282b2f0ce8e2') in 0.079307 seconds 
+  Import took 0.084793 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005858 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.128 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2129ms)
+		BeginReloadAssembly (195ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (1832ms)
+			LoadAssemblies (154ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (627ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (801ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (155ms)
+				ProcessInitializeOnLoadAttributes (494ms)
+				ProcessInitializeOnLoadMethodAttributes (140ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.3 MB.
+System memory in use after: 168.9 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3859.
+Total: 3.900700 ms (FindLiveObjects: 0.361600 ms CreateObjectMapping: 0.096200 ms MarkObjects: 3.033700 ms  DeleteObjects: 0.407300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007487 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.317 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2317ms)
+		BeginReloadAssembly (177ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (2038ms)
+			LoadAssemblies (148ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (582ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (91ms)
+			SetupLoadedEditorAssemblies (991ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (178ms)
+				ProcessInitializeOnLoadAttributes (622ms)
+				ProcessInitializeOnLoadMethodAttributes (177ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.4 MB.
+System memory in use after: 169.0 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3862.
+Total: 4.374400 ms (FindLiveObjects: 0.474300 ms CreateObjectMapping: 0.107600 ms MarkObjects: 3.357700 ms  DeleteObjects: 0.432800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004264 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.232 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2233ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (2007ms)
+			LoadAssemblies (108ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (421ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (79ms)
+			SetupLoadedEditorAssemblies (1140ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (182ms)
+				ProcessInitializeOnLoadAttributes (712ms)
+				ProcessInitializeOnLoadMethodAttributes (230ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.1 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3865.
+Total: 7.809700 ms (FindLiveObjects: 0.888100 ms CreateObjectMapping: 0.439000 ms MarkObjects: 5.926400 ms  DeleteObjects: 0.554200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006901 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.582 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2583ms)
+		BeginReloadAssembly (197ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (74ms)
+		EndReloadAssembly (2280ms)
+			LoadAssemblies (141ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (605ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (1153ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (202ms)
+				ProcessInitializeOnLoadAttributes (694ms)
+				ProcessInitializeOnLoadMethodAttributes (238ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (41ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.2 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3868.
+Total: 15.776700 ms (FindLiveObjects: 0.604100 ms CreateObjectMapping: 0.148100 ms MarkObjects: 13.903400 ms  DeleteObjects: 1.118600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006578 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.913 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1913ms)
+		BeginReloadAssembly (157ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1679ms)
+			LoadAssemblies (135ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (456ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (862ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (141ms)
+				ProcessInitializeOnLoadAttributes (561ms)
+				ProcessInitializeOnLoadMethodAttributes (148ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.2 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3871.
+Total: 3.925700 ms (FindLiveObjects: 0.348900 ms CreateObjectMapping: 0.098100 ms MarkObjects: 3.040900 ms  DeleteObjects: 0.436400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005930 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.969 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1970ms)
+		BeginReloadAssembly (195ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (82ms)
+		EndReloadAssembly (1703ms)
+			LoadAssemblies (123ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (512ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (821ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (152ms)
+				ProcessInitializeOnLoadAttributes (517ms)
+				ProcessInitializeOnLoadMethodAttributes (141ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.2 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3874.
+Total: 4.476300 ms (FindLiveObjects: 0.398800 ms CreateObjectMapping: 0.107000 ms MarkObjects: 3.495000 ms  DeleteObjects: 0.473400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004452 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.775 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1775ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (1543ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (444ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (754ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (128ms)
+				ProcessInitializeOnLoadAttributes (469ms)
+				ProcessInitializeOnLoadMethodAttributes (146ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.3 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3877.
+Total: 3.862100 ms (FindLiveObjects: 0.401300 ms CreateObjectMapping: 0.095000 ms MarkObjects: 2.931100 ms  DeleteObjects: 0.433300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006791 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.814 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1814ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1608ms)
+			LoadAssemblies (109ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (521ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (766ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (122ms)
+				ProcessInitializeOnLoadAttributes (482ms)
+				ProcessInitializeOnLoadMethodAttributes (152ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.3 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3880.
+Total: 4.252800 ms (FindLiveObjects: 0.418500 ms CreateObjectMapping: 0.099100 ms MarkObjects: 3.274700 ms  DeleteObjects: 0.459000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005837 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.072 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2072ms)
+		BeginReloadAssembly (156ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1825ms)
+			LoadAssemblies (129ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (421ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (1051ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (144ms)
+				ProcessInitializeOnLoadAttributes (660ms)
+				ProcessInitializeOnLoadMethodAttributes (234ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.3 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3883.
+Total: 9.147600 ms (FindLiveObjects: 0.974400 ms CreateObjectMapping: 0.258100 ms MarkObjects: 7.380800 ms  DeleteObjects: 0.532200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006730 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.546 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2546ms)
+		BeginReloadAssembly (229ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (77ms)
+		EndReloadAssembly (2159ms)
+			LoadAssemblies (159ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (607ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (1098ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (188ms)
+				ProcessInitializeOnLoadAttributes (667ms)
+				ProcessInitializeOnLoadMethodAttributes (226ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.8 MB.
+System memory in use after: 169.4 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3886.
+Total: 6.788200 ms (FindLiveObjects: 0.593500 ms CreateObjectMapping: 0.188700 ms MarkObjects: 5.297700 ms  DeleteObjects: 0.705800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005491 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.712 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1712ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1489ms)
+			LoadAssemblies (116ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (398ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (729ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (127ms)
+				ProcessInitializeOnLoadAttributes (428ms)
+				ProcessInitializeOnLoadMethodAttributes (163ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.9 MB.
+System memory in use after: 169.5 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3889.
+Total: 4.011900 ms (FindLiveObjects: 0.451800 ms CreateObjectMapping: 0.132400 ms MarkObjects: 2.991900 ms  DeleteObjects: 0.434600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006007 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.861 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1862ms)
+		BeginReloadAssembly (158ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (1621ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (519ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (766ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (472ms)
+				ProcessInitializeOnLoadMethodAttributes (151ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.9 MB.
+System memory in use after: 169.5 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3892.
+Total: 4.086800 ms (FindLiveObjects: 0.372700 ms CreateObjectMapping: 0.097000 ms MarkObjects: 3.169600 ms  DeleteObjects: 0.445600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004212 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.545 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1545ms)
+		BeginReloadAssembly (126ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1351ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (359ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (688ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (413ms)
+				ProcessInitializeOnLoadMethodAttributes (140ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.9 MB.
+System memory in use after: 169.5 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3895.
+Total: 3.910400 ms (FindLiveObjects: 0.359900 ms CreateObjectMapping: 0.098200 ms MarkObjects: 3.015100 ms  DeleteObjects: 0.436000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1843.610813 seconds.
+  path: Assets/Polaris Exported/_512x512_521526436888766736.png
+  artifactKey: Guid(2502b38ec1518b4419ed8ed94725dfb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/_512x512_521526436888766736.png using Guid(2502b38ec1518b4419ed8ed94725dfb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de964dd7bad674f82becf157aadb51d') in 0.327437 seconds 
+  Import took 0.333933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.409077 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_103778896016862736.asset
+  artifactKey: Guid(b1d4231959ad08b49b9b53a6dca509e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_103778896016862736.asset using Guid(b1d4231959ad08b49b9b53a6dca509e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cabe4a04c21953fbc1205f4358f09ac') in 9.648490 seconds 
+  Import took 9.655963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.632228 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_417066496016862736.asset
+  artifactKey: Guid(0dab121e71a3e7e429417ae8b4ce9552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_417066496016862736.asset using Guid(0dab121e71a3e7e429417ae8b4ce9552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86402255c21d3cd6c577bd659e74d3d5') in 9.362666 seconds 
+  Import took 9.371204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_00/TerrainData_e3ea99f6-86fa-4e43-a543-16d7614691c1.asset
+  artifactKey: Guid(22c8780ef9dcb8349bf3496fa203a88d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_00/TerrainData_e3ea99f6-86fa-4e43-a543-16d7614691c1.asset using Guid(22c8780ef9dcb8349bf3496fa203a88d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc5c0429b860aefcbf3ec572a2fd9a1e') in 4.614933 seconds 
+  Import took 4.622103 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.598520 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_774296207016862736.asset
+  artifactKey: Guid(509c1327e737e5d4c800d30ce7986b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_774296207016862736.asset using Guid(509c1327e737e5d4c800d30ce7986b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '532fe9dbea35fe74ccae951285ffb0e8') in 9.748059 seconds 
+  Import took 9.755913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.277601 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_986111607016862736.asset
+  artifactKey: Guid(de62ee8a25bc84043a19ecae55cda628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_986111607016862736.asset using Guid(de62ee8a25bc84043a19ecae55cda628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8f90fe70f0483207d6f83e19dfbe5b') in 9.445689 seconds 
+  Import took 9.454262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/Caustic.png
+  artifactKey: Guid(eeacbffe8eb46d343b0d7a9189130772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/Caustic.png using Guid(eeacbffe8eb46d343b0d7a9189130772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92c176e72b8c587d8db603b19d2a13c') in 0.011435 seconds 
+  Import took 0.018308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/AlbedoIcon.psd
+  artifactKey: Guid(8ddc15744c332cf4f9a0201a6ba2cdf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/AlbedoIcon.psd using Guid(8ddc15744c332cf4f9a0201a6ba2cdf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee57e0e4432af0955246dea3d8842989') in 0.033585 seconds 
+  Import took 0.039232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Runtime/Textures/CloudNoise.png
+  artifactKey: Guid(433abcf8c760aa746a5580cd0a190b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Runtime/Textures/CloudNoise.png using Guid(433abcf8c760aa746a5580cd0a190b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '879899a1ce84bbe9f715af304603cd34') in 0.008454 seconds 
+  Import took 0.013731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_RuntimePainting/TerrainData_9a0c599e-5700-4044-8191-4e0dad88c5fe.asset
+  artifactKey: Guid(871ce7351f06702498489d956a9f9442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_RuntimePainting/TerrainData_9a0c599e-5700-4044-8191-4e0dad88c5fe.asset using Guid(871ce7351f06702498489d956a9f9442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b02a9858917fc5d39e1bc973f487fd90') in 0.139982 seconds 
+  Import took 0.146271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_04/TerrainData_816030578723965736.asset
+  artifactKey: Guid(c07aef332750c7348be40d508eb0f413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_04/TerrainData_816030578723965736.asset using Guid(c07aef332750c7348be40d508eb0f413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bb0df9452e8d76d6c7e4bbec9f4b953') in 0.726894 seconds 
+  Import took 0.735669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_01/TerrainData_db2fe2f6-5a6e-46f9-8d44-8f9eba0fe7b8.asset
+  artifactKey: Guid(9213dfcf6003cb44f87e44d234a793a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_01/TerrainData_db2fe2f6-5a6e-46f9-8d44-8f9eba0fe7b8.asset using Guid(9213dfcf6003cb44f87e44d234a793a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7af55c286fa35c2b7453a8e25e66f3bf') in 2.613019 seconds 
+  Import took 2.619983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Polaris Exported/AlbedoMap_512x512_521526436888766736.png
+  artifactKey: Guid(c6f2521f1f5216046b9f523c11a5158a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/AlbedoMap_512x512_521526436888766736.png using Guid(c6f2521f1f5216046b9f523c11a5158a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf0fbfa5dfd991955b5e0755c027a423') in 0.008662 seconds 
+  Import took 0.015468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/AlbedoMap_4096x4096_522306463795664736.png
+  artifactKey: Guid(9a51d7f7c904f374fa405eb3c8b437cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/AlbedoMap_4096x4096_522306463795664736.png using Guid(9a51d7f7c904f374fa405eb3c8b437cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5126d2ac29193acd692aaba978db560') in 0.008934 seconds 
+  Import took 0.014437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Textures/CloudTexture0.png
+  artifactKey: Guid(d69d12cf3b1e2b144881667c78b2e4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Textures/CloudTexture0.png using Guid(d69d12cf3b1e2b144881667c78b2e4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b71718f127b7f24208e545d606c62c') in 0.009927 seconds 
+  Import took 0.016295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.975653 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_986111607016862736.asset
+  artifactKey: Guid(de62ee8a25bc84043a19ecae55cda628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_03/TerrainData_986111607016862736.asset using Guid(de62ee8a25bc84043a19ecae55cda628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8f90fe70f0483207d6f83e19dfbe5b') in 8.749749 seconds 
+  Import took 8.756634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3628.405683 seconds.
+  path: Assets/_TerrainData/TerrainData_004548678866866736.asset
+  artifactKey: Guid(081820daecaf1ec4e828668ffb25c5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainData/TerrainData_004548678866866736.asset using Guid(081820daecaf1ec4e828668ffb25c5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c066d23ef0dcac782788b46f9dc8f6c5') in 0.055987 seconds 
+  Import took 0.062901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/_TerrainData/TerrainData_731789078227076736.asset
+  artifactKey: Guid(8a78edeffe1121f43ba2543e0c883d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainData/TerrainData_731789078227076736.asset using Guid(8a78edeffe1121f43ba2543e0c883d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8ea3e7693a059dc1f9f9b3036fa4c0d') in 0.050445 seconds 
+  Import took 0.056792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.757701 seconds.
+  path: Assets/_TerrainData/TerrainData_639115244439866736.asset
+  artifactKey: Guid(e0b0ee4ef3889924a897e354d47fed53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainData/TerrainData_639115244439866736.asset using Guid(e0b0ee4ef3889924a897e354d47fed53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9a5554bac1454f66366b34d8e85753') in 0.049091 seconds 
+  Import took 0.055684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.059353 seconds.
+  path: Assets/Polaris Exported/ColorBlendMap_256x8_521526436888766736.png
+  artifactKey: Guid(1381d3cbc57391d4db038b094401b7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/ColorBlendMap_256x8_521526436888766736.png using Guid(1381d3cbc57391d4db038b094401b7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc0a82f32dcd2db74d85db1040f255eb') in 0.006765 seconds 
+  Import took 0.012342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Polaris Exported/ColorByHeightMap_256x8_521526436888766736.png
+  artifactKey: Guid(588b3877896448d4bb1bdf5d3b994c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/ColorByHeightMap_256x8_521526436888766736.png using Guid(588b3877896448d4bb1bdf5d3b994c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0228b257cc5840d9353309c7fb37eca6') in 0.006884 seconds 
+  Import took 0.012116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Polaris Exported/ColorByNormalMap_256x8_521526436888766736.png
+  artifactKey: Guid(90184d8069bd4864c9c88ce0096f8d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/ColorByNormalMap_256x8_521526436888766736.png using Guid(90184d8069bd4864c9c88ce0096f8d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e59f336378bc091871e1d0ce8f723c6') in 0.007006 seconds 
+  Import took 0.012673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.260747 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Moon.cubemap
+  artifactKey: Guid(ef0c7a1c7205a274c8ae147b1fc68287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Moon.cubemap using Guid(ef0c7a1c7205a274c8ae147b1fc68287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40bd8b025a76a51b329742ac9efd5104') in 0.127766 seconds 
+  Import took 0.133531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Stars.cubemap
+  artifactKey: Guid(59c7b8a8456c65d4aa28c47a49e4ea49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Stars.cubemap using Guid(59c7b8a8456c65d4aa28c47a49e4ea49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49dc31eb9d1d38059a74fecd1d86d97e') in 0.090379 seconds 
+  Import took 0.095935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Sun.cubemap
+  artifactKey: Guid(fd076cc0fa28689468954071d2137785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Sun.cubemap using Guid(fd076cc0fa28689468954071d2137785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b86d3b111e45f43fd0445cd623556d1') in 0.088570 seconds 
+  Import took 0.093925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/Demo_02_WaveMask.png.png
+  artifactKey: Guid(df84b0e04058dbf448cb95616635cd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/Demo_02_WaveMask.png.png using Guid(df84b0e04058dbf448cb95616635cd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd353fa22d2d64a4727c55e29026ee984') in 0.008160 seconds 
+  Import took 0.013808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Sun.cubemap
+  artifactKey: Guid(fd076cc0fa28689468954071d2137785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/Cubemap-Sun.cubemap using Guid(fd076cc0fa28689468954071d2137785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b86d3b111e45f43fd0445cd623556d1') in 0.091976 seconds 
+  Import took 0.097425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Dead/Dead_Atlas.png
+  artifactKey: Guid(2765194981100924d9211303031b6f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Dead/Dead_Atlas.png using Guid(2765194981100924d9211303031b6f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff3956bcfed9679e5acfcb0c6266e8ca') in 0.007986 seconds 
+  Import took 0.013405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/GearIcon.psd
+  artifactKey: Guid(591d4c9fbe7b16849b8de6e3b3ecb268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/GearIcon.psd using Guid(591d4c9fbe7b16849b8de6e3b3ecb268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '154630c6b8b0df6daeb9285265e33a74') in 0.008060 seconds 
+  Import took 0.014839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Dead/Dead_Normal.png
+  artifactKey: Guid(82d842314f2b30f4d933932c590cf16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Dead/Dead_Normal.png using Guid(82d842314f2b30f4d933932c590cf16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d57330ca80e76cb7c4158b42aad9f6') in 0.012383 seconds 
+  Import took 0.018718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/DefaultNormalMap.png
+  artifactKey: Guid(60b954d54d7515a4ca61b99ffb84bd35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/DefaultNormalMap.png using Guid(60b954d54d7515a4ca61b99ffb84bd35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841c27a55b4ce77b6df59dd5129fef29') in 0.006410 seconds 
+  Import took 0.011774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ElevationIcon.psd
+  artifactKey: Guid(c58ad81d72b5c624aa0a7ba4b3e14373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ElevationIcon.psd using Guid(c58ad81d72b5c624aa0a7ba4b3e14373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6e661467431f3f8b2f054097d86525') in 0.006657 seconds 
+  Import took 0.012085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.620008 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_02/TerrainData_5a9a3998-bbdc-4702-ae34-4ce6765fe439.asset
+  artifactKey: Guid(e643bbd3b6641a844baec09652da3b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Scenes/Demo_02/TerrainData_5a9a3998-bbdc-4702-ae34-4ce6765fe439.asset using Guid(e643bbd3b6641a844baec09652da3b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4309ef9e6450dd7b71b8958e2481a9d') in 3.159791 seconds 
+  Import took 3.166215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/HeightSamplingIcon.psd
+  artifactKey: Guid(ebd8a1d9d73590c46b57b034f64e792f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/HeightSamplingIcon.psd using Guid(ebd8a1d9d73590c46b57b034f64e792f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ae4c64e653ec250e23ee9f95a6d143b') in 0.007046 seconds 
+  Import took 0.012265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Polaris Exported/HeightMap_512x512_521526436888766736.png
+  artifactKey: Guid(9144d2bad02f0c64f8eaf2c7d4d228d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/HeightMap_512x512_521526436888766736.png using Guid(9144d2bad02f0c64f8eaf2c7d4d228d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c39e83beb8fc1411df4d3f419733ade') in 0.007809 seconds 
+  Import took 0.013278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.032597 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/MaskIcon.psd
+  artifactKey: Guid(6d2e238d0fddfb84c8c89137c629430d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/MaskIcon.psd using Guid(6d2e238d0fddfb84c8c89137c629430d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef682fafc09a2b349708a416bc7c43f') in 0.006468 seconds 
+  Import took 0.012263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.050657 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/MetallicIcon.psd
+  artifactKey: Guid(8ea68ca6867fe074ba0b5850780977f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/MetallicIcon.psd using Guid(8ea68ca6867fe074ba0b5850780977f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3352e1bffb4d9cb2e65989c1cbecc6') in 0.006824 seconds 
+  Import took 0.012493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042007 seconds.
+  path: Assets/Polaris Exported/MetallicMap_512x512_521526436888766736.png
+  artifactKey: Guid(6cddf9190c37be14aa8841f6ecd3bd64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/MetallicMap_512x512_521526436888766736.png using Guid(6cddf9190c37be14aa8841f6ecd3bd64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05ea0eae7b60e7fd0671242678c6922a') in 0.006909 seconds 
+  Import took 0.012543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/MetallicMap_4096x4096_522306463795664736.png
+  artifactKey: Guid(9c6d9164eff5c8f4d8342e5f9b0cacc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/MetallicMap_4096x4096_522306463795664736.png using Guid(9c6d9164eff5c8f4d8342e5f9b0cacc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92143b74351699ebe277501e2c71cfc5') in 0.009664 seconds 
+  Import took 0.015037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/PaintGrassIcon.psd
+  artifactKey: Guid(76d4675bfad3d734d9932fa98d8f8010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/PaintGrassIcon.psd using Guid(76d4675bfad3d734d9932fa98d8f8010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391a0ea8f482786719e55afc462465dd') in 0.006475 seconds 
+  Import took 0.011916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/NoiseIcon.psd
+  artifactKey: Guid(d40864a6805879e4c9e45369718f6199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/NoiseIcon.psd using Guid(d40864a6805879e4c9e45369718f6199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '248bd7980e4e0ee483f0642c02452f3b') in 0.006535 seconds 
+  Import took 0.012089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.229346 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/PaintTreeIcon.psd
+  artifactKey: Guid(9b571de6a53b07e4dae2e7d5be148d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/PaintTreeIcon.psd using Guid(9b571de6a53b07e4dae2e7d5be148d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958a381c8c86611c06b7e93d2d3afeed') in 0.006253 seconds 
+  Import took 0.011885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Textures/PerlinNoise.png
+  artifactKey: Guid(506efc34a9983ac4880684638edb4f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Textures/PerlinNoise.png using Guid(506efc34a9983ac4880684638edb4f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc0ed249ae86b23a00d92f3353a8377') in 0.008261 seconds 
+  Import took 0.013659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/PerlinNoise.png
+  artifactKey: Guid(1cd05f2cbe9ad29489e2d92e82d57253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/PerlinNoise.png using Guid(1cd05f2cbe9ad29489e2d92e82d57253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6edbe521fe4858fa4d9e4061df3823ed') in 0.007838 seconds 
+  Import took 0.013392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Runtime/Textures/PerlinNoise.png
+  artifactKey: Guid(7f313a2cde54f8e4ba19db94edca915b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Runtime/Textures/PerlinNoise.png using Guid(7f313a2cde54f8e4ba19db94edca915b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8401dcade93552ed9001b4684fc9230') in 0.009087 seconds 
+  Import took 0.014323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_00/Pine_00_Atlas.png
+  artifactKey: Guid(7da7fa97724548e438a10a07047ffc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_00/Pine_00_Atlas.png using Guid(7da7fa97724548e438a10a07047ffc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08df552a314710b277b358d6273249ac') in 0.011177 seconds 
+  Import took 0.016521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_00/Pine_00_Normal.png
+  artifactKey: Guid(0b2ef3fd2ffce91409e2de6d379bd322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_00/Pine_00_Normal.png using Guid(0b2ef3fd2ffce91409e2de6d379bd322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ed7188d8c75924a49217302f60c942a') in 0.007892 seconds 
+  Import took 0.013414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_01/Pine_01_Atlas.png
+  artifactKey: Guid(2f22d23282394654489671a857befab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_01/Pine_01_Atlas.png using Guid(2f22d23282394654489671a857befab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f349b22731fd4f738ac34c7f3aa0fec') in 0.008324 seconds 
+  Import took 0.013433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_01/Pine_01_Normal.png
+  artifactKey: Guid(787d1bf3f801ab4408b15ea36bc74a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/Pine_01/Pine_01_Normal.png using Guid(787d1bf3f801ab4408b15ea36bc74a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f9fcaefd05803d8f4aef103390f53a') in 0.007864 seconds 
+  Import took 0.013437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.788925 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Cubemaps/Poseidon_SkyCubemap_0.cubemap
+  artifactKey: Guid(cb76f6c136cf36e4aae51b3a5552d104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Cubemaps/Poseidon_SkyCubemap_0.cubemap using Guid(cb76f6c136cf36e4aae51b3a5552d104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0078996b6a5d9341ada34c25e5dd4de9') in 0.403612 seconds 
+  Import took 0.410807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Cubemaps/Poseidon_SkyCubemap_1.cubemap
+  artifactKey: Guid(37b71bd838ca86948bcf420ef4a2fca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Cubemaps/Poseidon_SkyCubemap_1.cubemap using Guid(37b71bd838ca86948bcf420ef4a2fca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3a14c8e09ed373aba786b12ef8c6907') in 0.337448 seconds 
+  Import took 0.344526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/RemapIcon.psd
+  artifactKey: Guid(1230b7583cbf3544e920206f6dbc8169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/RemapIcon.psd using Guid(1230b7583cbf3544e920206f6dbc8169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15b8a039c464abe10dba9e6f4d371bad') in 0.006473 seconds 
+  Import took 0.012173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.302085 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ScaleGrassIcon.psd
+  artifactKey: Guid(a2bf6801097a522438eb03bf0cda68fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ScaleGrassIcon.psd using Guid(a2bf6801097a522438eb03bf0cda68fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c196fa0f70afdf69eebd9bb44ec9fef') in 0.006774 seconds 
+  Import took 0.012463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ScaleObjectIcon.psd
+  artifactKey: Guid(6c006b88daf9b734fa2c402508cdcd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ScaleObjectIcon.psd using Guid(6c006b88daf9b734fa2c402508cdcd91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'badeeb71274665f9d8972895a4a09ab4') in 0.006692 seconds 
+  Import took 0.011992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ScaleTreeIcon.psd
+  artifactKey: Guid(1ac3d37e93f95df438e9a7156efdc4f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/ScaleTreeIcon.psd using Guid(1ac3d37e93f95df438e9a7156efdc4f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72df16e431f0c756fd5d9b1cfef44a0c') in 0.006366 seconds 
+  Import took 0.011638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.108083 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SmoothnessIcon.psd
+  artifactKey: Guid(d6d3a527a9addcd459b2dfa2dfe60f7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SmoothnessIcon.psd using Guid(d6d3a527a9addcd459b2dfa2dfe60f7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fcd1ead6fa3ef41f88426a3d9e7828e') in 0.006199 seconds 
+  Import took 0.011905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SpawnObjectIcon.psd
+  artifactKey: Guid(cc953290d309828419b257b5e9ad3530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SpawnObjectIcon.psd using Guid(cc953290d309828419b257b5e9ad3530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9dedd2a5e3448a9a0dd4b3edfbc00c') in 0.006331 seconds 
+  Import took 0.011697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.754553 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SplatIcon.psd
+  artifactKey: Guid(5b890136503b1ea4c97a74c0c3879303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SplatIcon.psd using Guid(5b890136503b1ea4c97a74c0c3879303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec7eeb5d720c87884378cc8e986287f4') in 0.006358 seconds 
+  Import took 0.012387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/StrokeOverlay.cubemap
+  artifactKey: Guid(f441ff010e8953541b03c7b6cf64f6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Cubemaps/StrokeOverlay.cubemap using Guid(f441ff010e8953541b03c7b6cf64f6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea0fdd89db6809a92db425ee098d923f') in 0.089850 seconds 
+  Import took 0.095045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Textures/Stroke.psd
+  artifactKey: Guid(09ba4b1902659f24f931e5be505d306f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Textures/Stroke.psd using Guid(09ba4b1902659f24f931e5be505d306f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bb48d79d3e85fd1d9dabffb0fc18aca') in 0.007527 seconds 
+  Import took 0.013040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.280092 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SubDivisionIcon.psd
+  artifactKey: Guid(951f32e54569bfc468e13dac18cb5f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/SubDivisionIcon.psd using Guid(951f32e54569bfc468e13dac18cb5f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '855bd1dfaa8497df42f46842a0bd3579') in 0.006456 seconds 
+  Import took 0.012104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/TerraceIcon.psd
+  artifactKey: Guid(81dffbdd326cbc04b883684c728e009d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/TerraceIcon.psd using Guid(81dffbdd326cbc04b883684c728e009d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d62f8293c75593f2fe05c8a4ad0340') in 0.006270 seconds 
+  Import took 0.011444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/Terrain-Color.png
+  artifactKey: Guid(d1bb668e1b16c0a43b95cc501f3f9fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Sample/Textures/Terrain-Color.png using Guid(d1bb668e1b16c0a43b95cc501f3f9fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a84224de695e55eafdcc4281b072f593') in 0.023192 seconds 
+  Import took 0.029922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014475 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Textures/TransparentTexture.psd
+  artifactKey: Guid(c5e4a25ceaec8e64090bcd1805f4b8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Jupiter - Procedural Sky/Sample/Textures/TransparentTexture.psd using Guid(c5e4a25ceaec8e64090bcd1805f4b8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83340e2a2c2c4c9f20c63a090a0a1d6f') in 0.006465 seconds 
+  Import took 0.012236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.372072 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/UnderwaterDistortion.png
+  artifactKey: Guid(25c43a7adff5d474291252fa203b540c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/UnderwaterDistortion.png using Guid(25c43a7adff5d474291252fa203b540c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b251c5361d6147c666026db0e1042761') in 0.008102 seconds 
+  Import took 0.013797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Polaris Exported/VisibilityMap_512x512_521526436888766736.png
+  artifactKey: Guid(c9258e70e5d7b4d439be7a9da5ea8159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris Exported/VisibilityMap_512x512_521526436888766736.png using Guid(c9258e70e5d7b4d439be7a9da5ea8159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3567126041f00109d18da35bdaa4687d') in 0.006707 seconds 
+  Import took 0.011909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/VisibilityIcon.psd
+  artifactKey: Guid(064a1781acf1dfd4893e2a3000801cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Textures/VisibilityIcon.psd using Guid(064a1781acf1dfd4893e2a3000801cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34133b11169c817540b52ff5e452920b') in 0.006998 seconds 
+  Import took 0.013062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030743 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/WetLens.psd
+  artifactKey: Guid(4d6c193a4acebf14db2085757b1db25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Textures/WetLens.psd using Guid(4d6c193a4acebf14db2085757b1db25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d30c1804e4ad2afeb06a26f4d7451e') in 0.009095 seconds 
+  Import took 0.014813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/WinterBranch/WinterBranch_Atlas.png
+  artifactKey: Guid(dec0695b453170f49a4f8a2b5670e037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/WinterBranch/WinterBranch_Atlas.png using Guid(dec0695b453170f49a4f8a2b5670e037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3365b2512ba52a41db531dd172b87006') in 0.007532 seconds 
+  Import took 0.012674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/WinterBranch/WinterBranch_Normal.png
+  artifactKey: Guid(bb1c9d066e3d00d45b4f0a5268a9a043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel Studio/Billboard/WinterBranch/WinterBranch_Normal.png using Guid(bb1c9d066e3d00d45b4f0a5268a9a043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f184b97e4fbf67fd55d7ec8a5700a530') in 0.007963 seconds 
+  Import took 0.013389 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004432 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.605 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1606ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1398ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (380ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (686ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (120ms)
+				ProcessInitializeOnLoadAttributes (418ms)
+				ProcessInitializeOnLoadMethodAttributes (138ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3209 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 170.6 MB.
+System memory in use after: 170.2 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 3935.
+Total: 4.369000 ms (FindLiveObjects: 0.399700 ms CreateObjectMapping: 0.106200 ms MarkObjects: 3.413900 ms  DeleteObjects: 0.447600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
