@@ -96,11 +96,11 @@ MonoBehaviour:
     texturingModel: 0
     splatsModel: 0
     origin: {x: 0, y: 0, z: 0}
-    tileSize: {x: 5000, y: 500, z: 5000}
+    tileSize: {x: 512, y: 512, z: 512}
     tileCountX: 1
     tileCountZ: 1
     groupId: 0
-    terrainNamePrefix: Terrain
+    terrainNamePrefix: TerrainTemplate
     dataDirectory: Assets/_TerrainData
     setShaderGroupId: 0
   renderPipelines:

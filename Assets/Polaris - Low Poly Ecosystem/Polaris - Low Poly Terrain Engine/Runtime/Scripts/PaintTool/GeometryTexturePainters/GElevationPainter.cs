@@ -141,7 +141,7 @@ namespace Pinwheel.Griffin.PaintTool
             RenderTexture rt = GTerrainTexturePainter.Internal_GetRenderTexture(terrain, heightMapResolution);
             PaintOnRT(terrain, args, rt, uvCorners);
 
-            RenderTexture.active = rt;
+            RenderTexture.active = rt;  //TODO: Use this!
             terrain.TerrainData.Geometry.HeightMap.ReadPixels(
                 new Rect(0, 0, heightMapResolution, heightMapResolution), 0, 0);
             terrain.TerrainData.Geometry.HeightMap.Apply();
@@ -162,6 +162,8 @@ namespace Pinwheel.Griffin.PaintTool
             SetupTextureGrid(terrain, mat);
             mat.SetTexture(MASK, args.BrushMask);
             mat.SetFloat(OPACITY, Mathf.Pow(args.Opacity, GTerrainTexturePainter.GEOMETRY_OPACITY_EXPONENT));
+            //NOTE: Returns ~0.25f with .6f strength
+            Debug.Log(Mathf.Pow(args.Opacity, GTerrainTexturePainter.GEOMETRY_OPACITY_EXPONENT));
             if (args.EnableTerrainMask)
             {
                 mat.SetTexture(TERRAIN_MASK, terrain.TerrainData.Mask.MaskMapOrDefault);
