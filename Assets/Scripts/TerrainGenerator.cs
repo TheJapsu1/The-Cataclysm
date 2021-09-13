@@ -1,22 +1,44 @@
 
-using System.Linq;
+using System;
 using Pinwheel.Griffin;
 using Pinwheel.Griffin.PaintTool;
+using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.UI;
+using Random = System.Random;
+
+
+// WorldPointToNormalized = Convert a world position into terrain normalized (XYZ01) space.
+// Also has inverse function
+
 
 public class TerrainGenerator : MonoBehaviour
 {
+    [SerializeField] private int seed = 030203;
+    
     [SerializeField] private GTerrainData dataTemplate;
 
     [SerializeField] private Material terrainMat;
-    [SerializeField] private TerrainStamp[] terrainStamps;
+     
+    [Tooltip("How many times the stamping process will be executed.")]
+    [Range(1, 50)]
     [SerializeField] private int passCount = 10;
     
-    [SerializeField] private float noiseScale;
+    [SerializeField] private float noiseFrequency = 200f;
+    
+    [Tooltip("Defines how much percentage of the max elevation the noise will take up in maximum.")]
+    [Range(1, 100)]
+    [SerializeField] private int noiseScale = 50;
+    
     [SerializeField] private float flattenElevation = 50;
 
+    [SerializeField] private bool smoothNormals = true;
+    
+    [SerializeField] private TerrainStamp[] terrainStamps;
+
     private GStylizedTerrain t;
+    private Random rng;
+
+    #region STAMP_PROPERTIES
     
     private static readonly int MAIN_TEX = Shader.PropertyToID("_MainTex");
 
@@ -32,6 +54,8 @@ public class TerrainGenerator : MonoBehaviour
     private static readonly int MASK = Shader.PropertyToID("_Mask");
     private static readonly int OPACITY = Shader.PropertyToID("_Opacity");
     private static readonly int TERRAIN_MASK = Shader.PropertyToID("_TerrainMask");
+
+    #endregion
     
     private static Material painterMaterial;
     private static Material PainterMaterial
@@ -45,27 +69,34 @@ public class TerrainGenerator : MonoBehaviour
             return painterMaterial;
         }
     }
-    
+
+    private void Start()
+    {
+        t = CreateTerrain();
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            t = CreateTerrain();
-        }
-
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             GenerateTerrain(t);
         }
+        
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            StampTerrain(t);
+        }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             FlattenHeightmap(t, flattenElevation);
         }
     }
 
-    private void GenerateTerrain(GStylizedTerrain terrain)
+    private void StampTerrain(GStylizedTerrain terrain)
     {
+        rng = new Random(seed);
+        
         for (int i = 0; i < passCount; i++)
         {
             // Setup the render texture
@@ -75,11 +106,11 @@ public class TerrainGenerator : MonoBehaviour
                 wrapMode = TextureWrapMode.Clamp
             };
             
-            float x = Random.Range(0, terrain.TerrainData.Geometry.HeightMap.width);
-            float y = Random.Range(0, terrain.TerrainData.Geometry.HeightMap.height);
+            float x = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.width);
+            float y = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.height);
             
             // Get the current stamp
-            TerrainStamp currentStamp = terrainStamps[Random.Range(0, terrainStamps.Length)];
+            TerrainStamp currentStamp = terrainStamps[rng.Next(0, terrainStamps.Length)];
 
             float elevation = GetElevationAt(x, y);
             
@@ -89,22 +120,29 @@ public class TerrainGenerator : MonoBehaviour
                 pass = 1;
                 elevation *= -1;
 
-                if (currentStamp.CanBeNegative) pass = 0;
+                if (!currentStamp.CanBeNegative) pass = 0;
             }
         
             Texture2D bg = terrain.TerrainData.Geometry.HeightMap;
             GCommon.CopyToRT(bg, rt);
 
             Material mat = PainterMaterial;
+            
             mat.SetTexture(MAIN_TEX, bg);
+            
             SetupTextureGrid(terrain, mat);
+            
             mat.SetTexture(MASK, currentStamp.Texture);
+            
             //mat.SetFloat(OPACITY, Mathf.Pow(elevation, GTerrainTexturePainter.GEOMETRY_OPACITY_EXPONENT));
-            mat.SetFloat(OPACITY, Mathf.Pow(elevation, currentStamp.Strength));
+            //mat.SetFloat(OPACITY, Mathf.Pow(elevation, currentStamp.Strength * elevation));
+            
+            mat.SetFloat(OPACITY, currentStamp.Strength);
+            
             mat.SetTexture(TERRAIN_MASK, Texture2D.blackTexture);
-        
-            //TODO: Find out if it matters that we're using zero as the height of the stamping point
-            Vector3[] worldPointCorners = GCommon.GetBrushQuadCorners(new Vector3(x, 0, y), currentStamp.Radius, Random.Range(0f, 360f));
+            
+            //TODO: Check if radius of 0.8f ... 1.2f yields better results?
+            Vector3[] worldPointCorners = GCommon.GetBrushQuadCorners(new Vector3(x, 0, y), currentStamp.GetRadius(rng), rng.Next(0, 360));
         
             Vector2[] uvCorners = GPaintToolUtilities.WorldToUvCorners(terrain, worldPointCorners);
             Rect dirtyRect = GUtilities.GetRectContainsPoints(uvCorners);
@@ -117,59 +155,45 @@ public class TerrainGenerator : MonoBehaviour
             terrain.TerrainData.Geometry.HeightMap.Apply();
             RenderTexture.active = null;
 
+            Vector2 uv = t.WorldPointToUV(new Vector3(x, 0, y));
+            Vector4 sample = t.GetHeightMapSample(uv);   //TODO: If bugs with terrain edges, change to GetInterpolatedHeightMapSample()
+            Debug.Log(sample);
+
             terrain.TerrainData.Geometry.SetRegionDirty(dirtyRect);
-            terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.Geometry);
+            terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.GeometryTimeSliced);
         }
-
-        //previewImg.texture = terrain.TerrainData.Geometry.HeightMap;
-
-        /*
-        // Set the pixels
-        Debug.Log(t.TerrainData.Geometry.HeightMap);
-        Debug.Log(t.TerrainData.Geometry.HeightMap.GetPixels().Length);
-
-        Color[] colors = GenerateHeightmap(t);
-        
-        t.TerrainData.Geometry.HeightMap.SetPixels(colors);
-        t.TerrainData.Geometry.HeightMap.Apply();
-        
-        // Set the terrain to dirty, to regenerate.
-        t.TerrainData.Geometry.SetRegionDirty(GCommon.UnitRect);
-        t.TerrainData.SetDirty(GTerrainData.DirtyFlags.Geometry);
-        
-        //Clean up
-        t.TerrainData.Geometry.ClearDirtyRegions();*/
     }
 
-    private Color[] GenerateHeightmap(GStylizedTerrain terrain)
+    private void GenerateTerrain(GStylizedTerrain terrain)
     {
-        Texture2D hm = new Texture2D(dataTemplate.Geometry.HeightMap.width, dataTemplate.Geometry.HeightMap.height);
+        Texture2D hm = terrain.TerrainData.Geometry.HeightMap;
         Color[] data = hm.GetPixels();
-        int resolution = terrain.TerrainData.Geometry.HeightMapResolution;
         
-        Debug.Log("Res: " + resolution + " Template Width: " + dataTemplate.Geometry.HeightMap.width + " Template height: " + dataTemplate.Geometry.HeightMap.height);
+        int resolution = terrain.TerrainData.Geometry.HeightMapResolution;
 
-        for (int x = 0; x < dataTemplate.Geometry.HeightMap.width; x++)
+        for (int x = 0; x < terrain.TerrainData.Geometry.HeightMap.width; x++)
         {
-            for (int y = 0; y < dataTemplate.Geometry.HeightMap.height; y++)
+            for (int y = 0; y < terrain.TerrainData.Geometry.HeightMap.height; y++)
             {
                 int pixelIndex = y * resolution + x;
-                
                 Color c = data[pixelIndex];
 
-                Vector2 enc = GCommon.EncodeTerrainHeight(GetElevationAt(x + terrain.transform.position.x,
-                    y + terrain.transform.position.z));
-
-                c.r = enc.x;
+                Vector2 enc = GCommon.EncodeTerrainHeight(GetNoiseAt(x, y) * (noiseScale / 100f));
+                c.r = enc.x; 
                 c.g = enc.y;
-                
                 data[pixelIndex] = c;
             }
         }
+        
+        hm.SetPixels(data);
+        hm.Apply();
 
-        return data;
+        terrain.TerrainData.Geometry.SetRegionDirty(GCommon.UnitRect);
+        terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.GeometryTimeSliced);
+        
+        terrain.TerrainData.Geometry.ClearDirtyRegions();
     }
-    
+
     private static void SetupTextureGrid(GStylizedTerrain t, Material mat)
         {
             mat.SetTexture(MAIN_TEX_L,
@@ -229,19 +253,18 @@ public class TerrainGenerator : MonoBehaviour
                 Texture2D.blackTexture);
         }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="x"></param>
-    /// <param name="y"></param>
-    /// <returns>Value that's approximately in the range -1...1</returns>
     private float GetElevationAt(float x, float y)
     {
-        float elevation = Mathf.PerlinNoise(x / noiseScale, y / noiseScale);
+        float elevation = GetNoiseAt(x, y);
 
         float normalized = (elevation - 0.5f) * 2;
         
         return normalized;
+    }
+
+    private float GetNoiseAt(float x, float y)
+    {
+        return Mathf.Clamp01(Mathf.PerlinNoise(x / noiseFrequency, y / noiseFrequency));
     }
     
     private GStylizedTerrain CreateTerrain()
@@ -266,6 +289,7 @@ public class TerrainGenerator : MonoBehaviour
         terrainData.Shading.CustomMaterial = terrainMat;
         terrainData.Shading.UpdateMaterials();
         terrainData.Geometry.AllowTimeSlicedGeneration = true;
+        terrainData.Geometry.SmoothNormal = smoothNormals;
         terrain.GroupId = 0;
         terrain.TerrainData = terrainData;
         terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.Shading);
@@ -305,23 +329,50 @@ public class TerrainGenerator : MonoBehaviour
         hm.Apply();
 
         terrain.TerrainData.Geometry.SetRegionDirty(GCommon.UnitRect);
-        terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.Geometry);
+        terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.GeometryTimeSliced);
         
         terrain.TerrainData.Geometry.ClearDirtyRegions();
     }
+
+    private void OnDrawGizmos()
+    {
+        if (t == null)
+        {
+            if (dataTemplate == null) return;
+            
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(Vector3.zero + new Vector3(dataTemplate.Geometry.Width / 2, dataTemplate.Geometry.Height / 2, dataTemplate.Geometry.Length / 2), dataTemplate.Geometry.Size);
+
+            return;
+        }
+        
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(t.Bounds.center, t.Bounds.size);
+        //Gizmos.DrawWireCube(t.transform.position + new Vector3(t.TerrainData.Geometry.Width / 2, t.TerrainData.Geometry.Height / 2, t.TerrainData.Geometry.Length / 2), t.TerrainData.Geometry.Size);
+    }
 }
 
-[System.Serializable]
+[Serializable]
 public class TerrainStamp
 {
     [SerializeField] private Texture2D texture;
-    [Range(5f, 500f)]
-    [SerializeField] private float radius = 20;
-    [SerializeField] private float strength = 1;
+    [MinMaxSlider(5f, 500f)]
+    [SerializeField] private Vector2 radius = new Vector2(20, 50);
+    [Range(0f, 1f)]
+    [SerializeField] private float strength = 0.5f;
     [SerializeField] private bool canBeNegative;
 
-    public float Strength => strength / 1000;
-    public float Radius => radius;
+    public float Strength => strength;
+
+    public float GetRadius(Random rng)
+    {
+        return (float) (rng.NextDouble() * (radius.y - radius.x) + radius.x);
+    }
     public Texture2D Texture => texture;
     public bool CanBeNegative => canBeNegative;
+
+    public override string ToString()
+    {
+        return Texture.name;
+    }
 }
