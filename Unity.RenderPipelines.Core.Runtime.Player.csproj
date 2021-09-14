@@ -350,14 +350,14 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Sirenix.Utilities">
+ <HintPath>D:/Unity Projects/The-Cataclysm/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll</HintPath>
+ </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/PackageCache/com.unity.burst@1.4.11/Unity.Burst.Unsafe.dll</HintPath>
- </Reference>
- <Reference Include="Sirenix.Utilities">
- <HintPath>D:/Unity Projects/The-Cataclysm/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
  <HintPath>D:/Unity Projects/The-Cataclysm/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>

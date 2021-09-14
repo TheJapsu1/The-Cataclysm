@@ -217,7 +217,6 @@
      <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\UniversalRP\WaterAdvancedURP.shader" />
      <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\RemapPainter.shader" />
      <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\_CGIncludeTemplate.cginc" />
-     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Third Parties Notice.txt" />
      <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\CurveFilter.shader" />
      <None Include="Assets\Polaris - Low Poly Ecosystem\Poseidon - Low Poly Water System\Runtime\Shaders\CGIncludes\PRipple.cginc" />
      <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_Grass.shader" />
@@ -516,6 +515,12 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Sirenix.OdinInspector.Modules.UnityMathematics">
+ <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/Sirenix.OdinInspector.Modules.UnityMathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor">
+ <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/Sirenix.OdinInspector.CompatibilityLayer.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.EditorCoroutines.Editor">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
  </Reference>
@@ -534,20 +539,14 @@
  <Reference Include="Unity.RenderPipelines.Core.Editor">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor">
- <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/Sirenix.OdinInspector.CompatibilityLayer.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Sirenix.OdinInspector.Modules.UnityMathematics">
- <HintPath>D:/Unity Projects/The-Cataclysm/Library/ScriptAssemblies/Sirenix.OdinInspector.Modules.UnityMathematics.dll</HintPath>
+ <Reference Include="Sirenix.Utilities">
+ <HintPath>D:/Unity Projects/The-Cataclysm/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>D:/Unity Projects/The-Cataclysm/Library/PackageCache/com.unity.burst@1.4.11/Unity.Burst.Unsafe.dll</HintPath>
- </Reference>
- <Reference Include="Sirenix.Utilities">
- <HintPath>D:/Unity Projects/The-Cataclysm/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
  <HintPath>D:/Unity Projects/The-Cataclysm/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
@@ -920,6 +919,10 @@
       <Project>{f725e83a-8c32-873f-d447-d291fa7d5daa}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
+      <Project>{adbe9292-9807-85a9-c481-ca005605fa5f}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{a7a97181-5fc1-ed6d-2cc0-86fc645d8bb5}</Project>
       <Name>Unity.TextMeshPro</Name>
@@ -955,10 +958,6 @@
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
       <Project>{6313e60b-2905-93a6-59a6-7369437b2078}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{adbe9292-9807-85a9-c481-ca005605fa5f}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

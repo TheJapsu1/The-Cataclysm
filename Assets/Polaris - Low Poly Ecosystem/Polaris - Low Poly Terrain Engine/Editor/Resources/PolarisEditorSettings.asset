@@ -95,7 +95,7 @@ MonoBehaviour:
     lightingModel: 0
     texturingModel: 0
     splatsModel: 0
-    origin: {x: 0, y: 0, z: 0}
+    origin: {x: 1024, y: 0, z: 0}
     tileSize: {x: 512, y: 512, z: 512}
     tileCountX: 1
     tileCountZ: 1
