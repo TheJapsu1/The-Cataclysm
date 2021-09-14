@@ -1,14 +1,9 @@
-
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Pinwheel.Griffin;
-using Pinwheel.Griffin.PaintTool;
 using Pinwheel.Griffin.StampTool;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = System.Random;
 
 
@@ -16,9 +11,12 @@ using Random = System.Random;
 // Also has inverse function
 
 
-public class TerrainGenerator : MonoBehaviour
+public class TerrainGenerator : SerializedMonoBehaviour
 {
-    [SerializeField] private int seed = 030203;
+    [ReadOnly]
+    public Dictionary<Vector3, GStylizedTerrain> TerrainChunks = new Dictionary<Vector3, GStylizedTerrain>();
+
+    [SerializeField] private string seed = "030203";
     
     [SerializeField] private GGeometryStamper stamper;
     [SerializeField] private GTerrainData dataTemplate;
@@ -42,38 +40,6 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField] private TerrainStamp[] terrainStamps;
 
     private Random rng;
-
-    #region STAMP_PROPERTIES
-    
-    private static readonly int MAIN_TEX = Shader.PropertyToID("_MainTex");
-
-    private static readonly int MAIN_TEX_L = Shader.PropertyToID("_MainTex_Left");
-    private static readonly int MAIN_TEX_TL = Shader.PropertyToID("_MainTex_TopLeft");
-    private static readonly int MAIN_TEX_T = Shader.PropertyToID("_MainTex_Top");
-    private static readonly int MAIN_TEX_TR = Shader.PropertyToID("_MainTex_TopRight");
-    private static readonly int MAIN_TEX_R = Shader.PropertyToID("_MainTex_Right");
-    private static readonly int MAIN_TEX_RB = Shader.PropertyToID("_MainTex_BottomRight");
-    private static readonly int MAIN_TEX_B = Shader.PropertyToID("_MainTex_Bottom");
-    private static readonly int MAIN_TEX_BL = Shader.PropertyToID("_MainTex_BottomLeft");
-
-    private static readonly int MASK = Shader.PropertyToID("_Mask");
-    private static readonly int OPACITY = Shader.PropertyToID("_Opacity");
-    private static readonly int TERRAIN_MASK = Shader.PropertyToID("_TerrainMask");
-
-    #endregion
-    
-    private static Material painterMaterial;
-    private static Material PainterMaterial
-    {
-        get
-        {
-            if (painterMaterial == null)
-            {
-                painterMaterial = new Material(GRuntimeSettings.Instance.internalShaders.elevationPainterShader);
-            }
-            return painterMaterial;
-        }
-    }
 
     private void Start()
     {
@@ -105,22 +71,6 @@ public class TerrainGenerator : MonoBehaviour
             foreach (GStylizedTerrain t in GStylizedTerrain.ActiveTerrains)
                 FlattenHeightmap(t, flattenElevation);
         }
-
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            foreach (GStylizedTerrain t in GStylizedTerrain.ActiveTerrains)
-                t.ConnectNeighbor();
-        }
-
-        if (Input.GetKeyDown(KeyCode.H))
-        { 
-            GStylizedTerrain.ConnectAdjacentTiles();
-        }
-
-        if (Input.GetKeyDown(KeyCode.J))
-        { 
-            GStylizedTerrain.MatchEdges(-1);
-        }
     }
 
     private IEnumerator GenerateAllTerrains()
@@ -130,21 +80,17 @@ public class TerrainGenerator : MonoBehaviour
             GenerateTerrain(t);
         }
         
+        GStylizedTerrain.MatchEdges(-1);
+        //GStylizedTerrain.ConnectAdjacentTiles();
+        
         yield return null;
     }
 
     private IEnumerator StampAllTerrains()
     {
-        //StampTerrain(GStylizedTerrain.ActiveTerrains.First());
-        rng = new Random(seed);
-        
         foreach (GStylizedTerrain t in GStylizedTerrain.ActiveTerrains)
         {
             StampTerrain(t);
-            
-            Debug.Log("Stamp " + t.transform.position);
-
-            yield return new WaitForSecondsRealtime(1);
         }
         
         yield return null;
@@ -152,100 +98,41 @@ public class TerrainGenerator : MonoBehaviour
 
     private void StampTerrain(GStylizedTerrain terrain)
     {
-        //TODO: Move all the Stamp settings of GGeometryStamper (editor) to the stamp class.
+        rng = new Random(seed.GetHashCode() + terrain.transform.position.GetHashCode());
 
         // Complete all the stamp passes
         for (int i = 0; i < passCount; i++)
         {
-            // Get random coords inside the Terrain chunk, and move the stamper there
+            // Get random horizontal coords inside the Terrain chunk
             float x = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.width) + terrain.transform.position.x;
             float z = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.height) + terrain.transform.position.z;
-
-            GStylizedTerrain.Raycast(new Ray(new Vector3(x, terrain.TerrainData.Geometry.Height + 10, z), Vector3.down),
-                out RaycastHit hit, terrain.TerrainData.Geometry.Height * 2, terrain.GroupId);
             
             // Get and set a random stamp
             TerrainStamp currentStamp = terrainStamps[rng.Next(0, terrainStamps.Length)];
             stamper.Stamp = currentStamp.Texture;
 
-            //TODO: Raycast the terrain to get the correct y position for the stamper.
-            stamper.Position = hit.point;
+            // Set the Position, Rotation and Scale of the stamper
+            stamper.Rotation = Quaternion.Euler(0, rng.Next(0, 360), 0);
+            
+            stamper.Position = new Vector3(x, 0, z);
+            //stamper.Position = hit.point;
             stamper.Scale = currentStamp.GetSize(rng);
-            //TODO: Also set random rotation and scale.
+                        
+            // Set the operation type
+            GStampOperation stampOperation = currentStamp.GetOperation(rng);
+            stamper.Operation = stampOperation;
 
-            // Apply
+            // Set the falloff
+           stamper.Falloff = currentStamp.Falloff;
+
+            // Apply, and perform stamp
             stamper.Apply();
+            
+            Debug.Log("Stamped " + currentStamp + ", with operation " + stampOperation + " at " + stamper.Position);
         }
-
-        /*
-        for (int i = 0; i < passCount; i++)
-        {
-            // Setup the render texture
-            int heightMapResolution = terrain.TerrainData.Geometry.HeightMapResolution;
-            RenderTexture rt = new RenderTexture(heightMapResolution, heightMapResolution, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear)
-            {
-                wrapMode = TextureWrapMode.Clamp
-            };
-            
-            float x = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.width) + terrain.transform.position.x;
-            float y = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.height) + terrain.transform.position.z;
-            
-            // Get the current stamp
-            TerrainStamp currentStamp = terrainStamps[rng.Next(0, terrainStamps.Length)];
-
-            float elevation = GetElevationAt(x + terrain.transform.position.x, y + terrain.transform.position.z);
-            
-            int pass = 0;
-            if (elevation < 0)
-            {
-                pass = 1;
-                elevation *= -1;
-
-                if (!currentStamp.CanBeNegative) pass = 0;
-            }
-        
-            Texture2D bg = terrain.TerrainData.Geometry.HeightMap;
-            GCommon.CopyToRT(bg, rt);
-
-            Material mat = PainterMaterial;
-            
-            mat.SetTexture(MAIN_TEX, bg);
-            
-            SetupTextureGrid(terrain, mat);
-            
-            mat.SetTexture(MASK, currentStamp.Texture);
-            
-            //mat.SetFloat(OPACITY, Mathf.Pow(elevation, GTerrainTexturePainter.GEOMETRY_OPACITY_EXPONENT));
-            //mat.SetFloat(OPACITY, Mathf.Pow(elevation, currentStamp.Strength * elevation));
-            
-            mat.SetFloat(OPACITY, currentStamp.Strength);
-            
-            mat.SetTexture(TERRAIN_MASK, Texture2D.blackTexture);
-            
-            //TODO: Check if radius of 0.8f ... 1.2f yields better results?
-            Vector3[] worldPointCorners = GCommon.GetBrushQuadCorners(new Vector3(x, 0, y), currentStamp.GetRadius(rng), rng.Next(0, 360));
-        
-            Vector2[] uvCorners = GPaintToolUtilities.WorldToUvCorners(terrain, worldPointCorners);
-            Rect dirtyRect = GUtilities.GetRectContainsPoints(uvCorners);
-
-            GCommon.DrawQuad(rt, uvCorners, mat, pass);
-        
-            RenderTexture.active = rt;
-            terrain.TerrainData.Geometry.HeightMap.ReadPixels(
-                new Rect(0, 0, heightMapResolution, heightMapResolution), 0, 0);
-            terrain.TerrainData.Geometry.HeightMap.Apply();
-            RenderTexture.active = null;
-
-            Vector2 uv = terrain.WorldPointToUV(new Vector3(x, 0, y));
-            Vector4 sample = terrain.GetHeightMapSample(uv);   //TODO: If bugs with terrain edges, change to GetInterpolatedHeightMapSample()
-            Debug.Log(sample);
-
-            terrain.TerrainData.Geometry.SetRegionDirty(dirtyRect);
-            terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.GeometryTimeSliced);
-        }*/
     }
 
-    private bool GenerateTerrain(GStylizedTerrain terrain)
+    private void GenerateTerrain(GStylizedTerrain terrain)
     {
         Texture2D hm = terrain.TerrainData.Geometry.HeightMap;
         Color[] data = hm.GetPixels();
@@ -273,76 +160,6 @@ public class TerrainGenerator : MonoBehaviour
         terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.GeometryTimeSliced);
         
         terrain.TerrainData.Geometry.ClearDirtyRegions();
-
-        return true;
-    }
-
-    private static void SetupTextureGrid(GStylizedTerrain t, Material mat)
-        {
-            mat.SetTexture(MAIN_TEX_L,
-                t.LeftNeighbor && t.LeftNeighbor.TerrainData ?
-                t.LeftNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-
-            mat.SetTexture(MAIN_TEX_TL,
-                t.LeftNeighbor && t.LeftNeighbor.TopNeighbor && t.LeftNeighbor.TopNeighbor.TerrainData ?
-                t.LeftNeighbor.TopNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-            mat.SetTexture(MAIN_TEX_TL,
-                t.TopNeighbor && t.TopNeighbor.LeftNeighbor && t.TopNeighbor.LeftNeighbor.TerrainData ?
-                t.TopNeighbor.LeftNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-
-            mat.SetTexture(MAIN_TEX_T,
-                t.TopNeighbor && t.TopNeighbor.TerrainData ?
-                t.TopNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-
-            mat.SetTexture(MAIN_TEX_TR,
-                t.RightNeighbor && t.RightNeighbor.TopNeighbor && t.RightNeighbor.TopNeighbor.TerrainData ?
-                t.RightNeighbor.TopNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-            mat.SetTexture(MAIN_TEX_TR,
-                t.TopNeighbor && t.TopNeighbor.RightNeighbor && t.TopNeighbor.RightNeighbor.TerrainData ?
-                t.TopNeighbor.RightNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-
-            mat.SetTexture(MAIN_TEX_R,
-                t.RightNeighbor && t.RightNeighbor.TerrainData ?
-                t.RightNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-
-            mat.SetTexture(MAIN_TEX_RB,
-                t.RightNeighbor && t.RightNeighbor.BottomNeighbor && t.RightNeighbor.BottomNeighbor.TerrainData ?
-                t.RightNeighbor.BottomNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-            mat.SetTexture(MAIN_TEX_RB,
-                t.BottomNeighbor && t.BottomNeighbor.RightNeighbor && t.BottomNeighbor.RightNeighbor.TerrainData ?
-                t.BottomNeighbor.RightNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-
-            mat.SetTexture(MAIN_TEX_B,
-                t.BottomNeighbor && t.BottomNeighbor.TerrainData ?
-                t.BottomNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-
-            mat.SetTexture(MAIN_TEX_BL,
-                t.LeftNeighbor && t.LeftNeighbor.BottomNeighbor && t.LeftNeighbor.BottomNeighbor.TerrainData ?
-                t.LeftNeighbor.BottomNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-            mat.SetTexture(MAIN_TEX_BL,
-                t.BottomNeighbor && t.BottomNeighbor.LeftNeighbor && t.BottomNeighbor.LeftNeighbor.TerrainData ?
-                t.BottomNeighbor.LeftNeighbor.TerrainData.Geometry.HeightMap :
-                Texture2D.blackTexture);
-        }
-
-    private float GetElevationAt(float x, float y)
-    {
-        float elevation = GetNoiseAt(x, y);
-
-        float normalized = (elevation - 0.5f) * 2;
-        
-        return normalized;
     }
 
     private float GetNoiseAt(float x, float y)
@@ -434,29 +251,182 @@ public class TerrainGenerator : MonoBehaviour
     }
 }
 
-[Serializable]
-public class TerrainStamp
+#region OBSOLETE STUFF
+
+
+// Raycast the terrain surface for a spot where to stamp
+//GStylizedTerrain.Raycast(new Ray(new Vector3(x, terrain.TerrainData.Geometry.Height + 10, z), Vector3.down),
+//    out RaycastHit hit, terrain.TerrainData.Geometry.Height * 2, terrain.GroupId);
+
+    /*
+    private static void SetupTextureGrid(GStylizedTerrain t, Material mat)
+        {
+            mat.SetTexture(MAIN_TEX_L,
+                t.LeftNeighbor && t.LeftNeighbor.TerrainData ?
+                t.LeftNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+
+            mat.SetTexture(MAIN_TEX_TL,
+                t.LeftNeighbor && t.LeftNeighbor.TopNeighbor && t.LeftNeighbor.TopNeighbor.TerrainData ?
+                t.LeftNeighbor.TopNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+            mat.SetTexture(MAIN_TEX_TL,
+                t.TopNeighbor && t.TopNeighbor.LeftNeighbor && t.TopNeighbor.LeftNeighbor.TerrainData ?
+                t.TopNeighbor.LeftNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+
+            mat.SetTexture(MAIN_TEX_T,
+                t.TopNeighbor && t.TopNeighbor.TerrainData ?
+                t.TopNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+
+            mat.SetTexture(MAIN_TEX_TR,
+                t.RightNeighbor && t.RightNeighbor.TopNeighbor && t.RightNeighbor.TopNeighbor.TerrainData ?
+                t.RightNeighbor.TopNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+            mat.SetTexture(MAIN_TEX_TR,
+                t.TopNeighbor && t.TopNeighbor.RightNeighbor && t.TopNeighbor.RightNeighbor.TerrainData ?
+                t.TopNeighbor.RightNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+
+            mat.SetTexture(MAIN_TEX_R,
+                t.RightNeighbor && t.RightNeighbor.TerrainData ?
+                t.RightNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+
+            mat.SetTexture(MAIN_TEX_RB,
+                t.RightNeighbor && t.RightNeighbor.BottomNeighbor && t.RightNeighbor.BottomNeighbor.TerrainData ?
+                t.RightNeighbor.BottomNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+            mat.SetTexture(MAIN_TEX_RB,
+                t.BottomNeighbor && t.BottomNeighbor.RightNeighbor && t.BottomNeighbor.RightNeighbor.TerrainData ?
+                t.BottomNeighbor.RightNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+
+            mat.SetTexture(MAIN_TEX_B,
+                t.BottomNeighbor && t.BottomNeighbor.TerrainData ?
+                t.BottomNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+
+            mat.SetTexture(MAIN_TEX_BL,
+                t.LeftNeighbor && t.LeftNeighbor.BottomNeighbor && t.LeftNeighbor.BottomNeighbor.TerrainData ?
+                t.LeftNeighbor.BottomNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+            mat.SetTexture(MAIN_TEX_BL,
+                t.BottomNeighbor && t.BottomNeighbor.LeftNeighbor && t.BottomNeighbor.LeftNeighbor.TerrainData ?
+                t.BottomNeighbor.LeftNeighbor.TerrainData.Geometry.HeightMap :
+                Texture2D.blackTexture);
+        }*/
+
+    /*
+    private float GetElevationAt(float x, float y)
+    {
+        float elevation = GetNoiseAt(x, y);
+
+        float normalized = (elevation - 0.5f) * 2;
+        
+        return normalized;
+    }*/
+
+        /*
+        for (int i = 0; i < passCount; i++)
+        {
+            // Setup the render texture
+            int heightMapResolution = terrain.TerrainData.Geometry.HeightMapResolution;
+            RenderTexture rt = new RenderTexture(heightMapResolution, heightMapResolution, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear)
+            {
+                wrapMode = TextureWrapMode.Clamp
+            };
+            
+            float x = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.width) + terrain.transform.position.x;
+            float y = rng.Next(0, terrain.TerrainData.Geometry.HeightMap.height) + terrain.transform.position.z;
+            
+            // Get the current stamp
+            TerrainStamp currentStamp = terrainStamps[rng.Next(0, terrainStamps.Length)];
+
+            float elevation = GetElevationAt(x + terrain.transform.position.x, y + terrain.transform.position.z);
+            
+            int pass = 0;
+            if (elevation < 0)
+            {
+                pass = 1;
+                elevation *= -1;
+
+                if (!currentStamp.CanBeNegative) pass = 0;
+            }
+        
+            Texture2D bg = terrain.TerrainData.Geometry.HeightMap;
+            GCommon.CopyToRT(bg, rt);
+
+            Material mat = PainterMaterial;
+            
+            mat.SetTexture(MAIN_TEX, bg);
+            
+            SetupTextureGrid(terrain, mat);
+            
+            mat.SetTexture(MASK, currentStamp.Texture);
+            
+            //mat.SetFloat(OPACITY, Mathf.Pow(elevation, GTerrainTexturePainter.GEOMETRY_OPACITY_EXPONENT));
+            //mat.SetFloat(OPACITY, Mathf.Pow(elevation, currentStamp.Strength * elevation));
+            
+            mat.SetFloat(OPACITY, currentStamp.Strength);
+            
+            mat.SetTexture(TERRAIN_MASK, Texture2D.blackTexture);
+            
+            //TODO: Check if radius of 0.8f ... 1.2f yields better results?
+            Vector3[] worldPointCorners = GCommon.GetBrushQuadCorners(new Vector3(x, 0, y), currentStamp.GetRadius(rng), rng.Next(0, 360));
+        
+            Vector2[] uvCorners = GPaintToolUtilities.WorldToUvCorners(terrain, worldPointCorners);
+            Rect dirtyRect = GUtilities.GetRectContainsPoints(uvCorners);
+
+            GCommon.DrawQuad(rt, uvCorners, mat, pass);
+        
+            RenderTexture.active = rt;
+            terrain.TerrainData.Geometry.HeightMap.ReadPixels(
+                new Rect(0, 0, heightMapResolution, heightMapResolution), 0, 0);
+            terrain.TerrainData.Geometry.HeightMap.Apply();
+            RenderTexture.active = null;
+
+            Vector2 uv = terrain.WorldPointToUV(new Vector3(x, 0, y));
+            Vector4 sample = terrain.GetHeightMapSample(uv);   //TODO: If bugs with terrain edges, change to GetInterpolatedHeightMapSample()
+            Debug.Log(sample);
+
+            terrain.TerrainData.Geometry.SetRegionDirty(dirtyRect);
+            terrain.TerrainData.SetDirty(GTerrainData.DirtyFlags.GeometryTimeSliced);
+        }*/
+
+/*
+#region STAMP_PROPERTIES
+
+private static readonly int MAIN_TEX = Shader.PropertyToID("_MainTex");
+
+private static readonly int MAIN_TEX_L = Shader.PropertyToID("_MainTex_Left");
+private static readonly int MAIN_TEX_TL = Shader.PropertyToID("_MainTex_TopLeft");
+private static readonly int MAIN_TEX_T = Shader.PropertyToID("_MainTex_Top");
+private static readonly int MAIN_TEX_TR = Shader.PropertyToID("_MainTex_TopRight");
+private static readonly int MAIN_TEX_R = Shader.PropertyToID("_MainTex_Right");
+private static readonly int MAIN_TEX_RB = Shader.PropertyToID("_MainTex_BottomRight");
+private static readonly int MAIN_TEX_B = Shader.PropertyToID("_MainTex_Bottom");
+private static readonly int MAIN_TEX_BL = Shader.PropertyToID("_MainTex_BottomLeft");
+
+private static readonly int MASK = Shader.PropertyToID("_Mask");
+private static readonly int OPACITY = Shader.PropertyToID("_Opacity");
+private static readonly int TERRAIN_MASK = Shader.PropertyToID("_TerrainMask");
+
+#endregion
+
+private static Material painterMaterial;
+private static Material PainterMaterial
 {
-    [SerializeField] private Texture2D texture;
-    [FormerlySerializedAs("radius")]
-    [MinMaxSlider(5f, 500f)]
-    [SerializeField] private Vector2 size = new Vector2(20, 50);
-    [Range(0f, 1f)]
-    [SerializeField] private float strength = 0.5f;
-    [SerializeField] private bool canBeNegative;
-
-    public float Strength => strength;
-
-    public Vector3 GetSize(Random rng)
+    get
     {
-        float val = (float) (rng.NextDouble() * (size.y - size.x) + size.x);
-        return new Vector3(val, val, val);
-    }
-    public Texture2D Texture => texture;
-    public bool CanBeNegative => canBeNegative;
-
-    public override string ToString()
-    {
-        return Texture.name;
+        if (painterMaterial == null)
+        {
+            painterMaterial = new Material(GRuntimeSettings.Instance.internalShaders.elevationPainterShader);
+        }
+        return painterMaterial;
     }
 }
+*/
+
+#endregion
